@@ -1,0 +1,25 @@
+{
+    "HomePage": {
+        "title": "Головна сторінка",
+        "about": "Про нас",
+        "o-projekcie": "Головна сторінка",
+        "aktualnosci": "Новини",
+        "kontakt": "Контакт",
+        "rejestracja": "Реєстрація",
+        "zapiszSie": "Записатися"
+    },
+    "Menu": {
+        "o-projekcie": "Головна сторінка",
+        "aktualnosci": "Новини",
+        "kontakt": "Контакт",
+        "rejestracja": "Реєстрація",
+        "zapiszSie": "Записатися"
+    },
+    "Footer": {
+        "adress": "Adres",
+        "aktualnosci": "Aktualności",
+        "kontakt": "Kontakt",
+        "rejestracja": "Rejestracja",
+        "zapiszSie": "Zapisz się"
+    }
+}

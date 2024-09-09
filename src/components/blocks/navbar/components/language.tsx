@@ -1,31 +1,50 @@
-import { useState } from "react";
+"use client";
 
-// language list
-const supportLanguage = ["En", "Bn", "Es", "De"];
+import {
+  localeNames,
+  locales,
+  usePathname,
+  useRouter,
+  type Locale,
+} from "../../../../i18n.config";
 
-export default function Language() {
-  const [language, setLanguage] = useState(supportLanguage[0]);
+
+
+
+export default function Language({ locale, }: { locale: Locale }) {
+
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const changeLocale = (
+    event: React.ChangeEvent<HTMLSelectElement>,
+  ) => {
+    const newLocale = event.target.value as Locale;
+
+    // ...if the user chose Arabic ("ar-eg"),
+    // router.replace() will prefix the pathname
+    // with this `newLocale`, effectively changing
+    // languages by navigating to `/ar-eg/about`.
+    router.replace(pathname, { locale: newLocale });
+  };
 
   return (
-    <li className="nav-item dropdown language-select text-uppercase">
-      <a
-        role="button"
-        aria-haspopup="true"
-        aria-expanded="false"
-        data-bs-toggle="dropdown"
-        className="nav-link dropdown-item dropdown-toggle">
-        {language}
-      </a>
+    <>
 
-      <ul className="dropdown-menu">
-        {supportLanguage.map((lang) => (
-          <li className="nav-item" key={lang}>
-            <button className="dropdown-item" onClick={() => setLanguage(lang)}>
-              {lang}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </li>
+      <div className="ms-5">
+        <select
+          value={locale}
+          onChange={changeLocale}
+          className="form-select"
+        >
+          {locales.map((loc) => (
+            <option key={loc} value={loc}>
+              {localeNames[loc]}
+            </option>
+          ))}
+        </select>
+      </div>
+    </>
   );
 }

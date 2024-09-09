@@ -11,12 +11,14 @@
   "dependencies": {
     "@ckeditor/strapi-plugin-ckeditor": "^0.0.11",
     "@strapi/blocks-react-renderer": "^1.0.1",
+    "babel": "^6.23.0",
     "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
-    "next": "14.2.2",
+    "next": "^14.2.2",
     "next-i18next": "^15.3.1",
+    "next-intl": "^3.17.6",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.75.0",
@@ -24,10 +26,14 @@
     "swiper": "^11.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.2",
     "typescript": "^5"
   }

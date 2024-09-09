@@ -7,6 +7,9 @@ import Toplogo from "@/components/blocks/navbar/top-logo/Toplogo";
 import Footer2 from "@/components/blocks/footer/Footer2";
 import Link from "next/link";
 import AccessibilityButton from "@/components/reuseable/AccessibilityButton";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
+import { getMessages } from 'next-intl/server';
+import FooterBase from "@/components/blocks/footer/FooterBase";
 
 
 
@@ -17,25 +20,41 @@ export const metadata: Metadata = {
   description: "INTEGRACJA-ADAPTACJA!",
 };
 
-export default function RootLayout({
-  children,
+export default async function RootLayout({
+  children, params: { locale }
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+
+
+  // try {
+  //   messages = (await import(`../messages/${locale}.json`)).default;
+  // } catch (error) {
+  //   // notFound();
+  // }
+
   return (
 
 
-    <html lang="pl" data-bs-theme="light">
+    <html lang={locale} data-bs-theme="light">
       <head>
-        <link rel="icon" type="image/x-icon" sizes="16x16" href="/img/favicon.ico" />
+        {/* <link rel="icon" type="image/x-icon" sizes="16x16" href="/img/favicon.ico" /> */}
       </head>
       <body className={manrope.className}>
-
         <NavbarOne button={<Link title="Contact" href="/rekrutacja" className="btn btn-sm btn-primary rounded-pill">Zapisz się</Link>} />
+
         <AccessibilityButton />
         <div>{children}</div>
-        <Footer2 />
+        <NextIntlClientProvider>
+          <FooterBase params={{
+            locale: locale
+          }} />
+
+        </NextIntlClientProvider>
       </body>
+
+
     </html>
 
   );

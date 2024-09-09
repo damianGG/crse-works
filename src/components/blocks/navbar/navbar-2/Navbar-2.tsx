@@ -53,7 +53,7 @@ export default function Navbar2({
                   </a>
                 </li>
 
-                <Language />
+                {/* <Language /> */}
 
                 <li className="nav-item d-lg-none">
                   <button

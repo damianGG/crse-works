@@ -1,15 +1,13 @@
-import Link from "next/link"
-import type { Metadata } from 'next'
+import Link from "next/link";
 import { format } from 'date-fns';
-import { pl } from 'date-fns/locale';
-import './style.css'
-import flagaUe from '@/icons/flaga-ue-tlo.png'
+import { pl, uk } from 'date-fns/locale';
+import './style.css';
+import flagaUe from '@/icons/flaga-ue-tlo.png';
+
 const backendLink = process.env.STRAPI_PUBLIC_BACKEND_LINK;
 
-
-async function getStrapiData() {
-    const data = await fetch(`${backendLink}/api/aktualnoscis-workts?sort=id:desc`,
-
+async function getStrapiData(locale: string) {
+    const res = await fetch(`${backendLink}/api/aktualnoscis-workts?sort=id:desc&locale=${locale}`,
         {
             cache: 'no-store',
             method: 'GET',
@@ -19,13 +17,10 @@ async function getStrapiData() {
             },
         }
     );
-    console.log(data);
-    return data.json();
-}
-
-export const metadata: Metadata = {
-    title: 'Aktualności o projekcie',
-    description: 'Aktualności o projekcie',
+    if (!res.ok) {
+        throw new Error('Failed to fetch data');
+    }
+    return res.json();
 }
 
 function createSlug(text: string): string {
@@ -36,19 +31,22 @@ function createSlug(text: string): string {
 
     return text
         .split('')
-        .map(char => polishChars[char] || char) // Zamień polskie znaki
+        .map(char => polishChars[char] || char)
         .join('')
-        .toLowerCase() // Zamień na małe litery
-        .replace(/[^a-z0-9\s-]/g, '') // Usuń wszystko oprócz liter, cyfr, spacji i myślników
-        .trim() // Usuń białe znaki z początku i końca
-        .replace(/\s+/g, '-') // Zamień spacje na myślniki
-        .replace(/-+/g, '-'); // Usuń powtarzające się myślniki
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-');
 }
 
-export default async function News() {
-    const { data } = await getStrapiData();
-    // const formattedDate = format(new Date(date), 'dd MMMM yyyy', { locale: pl });
+// Now using Next.js 13+ dynamic routing and server-side data fetching
+export default async function News({ params }: { params: { locale: string } }) {
+    // Determine the locale from the URL params
+    const locale = params.locale === 'pl' ? 'pl' : 'uk-UA';
 
+    // Fetch data dynamically based on locale
+    const { data } = await getStrapiData(locale);
 
     return (
         <>
@@ -80,7 +78,7 @@ export default async function News() {
                     <div className="row">
                         <div className="col-md-9 col-lg-7 col-xl-5 mx-auto">
                             <h1 className="display-1 mb-3" style={{ color: 'white' }}>
-                                Aktualności
+                                {locale === 'pl' ? 'Aktulaności' : 'Новини'}
                             </h1>
                             <p className="lead px-xxl-10"></p>
                         </div>
@@ -92,8 +90,15 @@ export default async function News() {
 
                     {data.map((article: any) => {
                         const slug = createSlug(article.attributes.tytul);
-                        const articleUrl = `/aktualnosci/${article.id}-${slug}`;
+                        const dateLocale = locale === 'pl' ? pl : uk;
+                        console.log(locale);
 
+                        // Generate article URL: without 'pl' prefix for Polish, with 'uk' for Ukrainian
+                        const articleUrl = locale === 'pl'
+                            ? `/pl/aktualnosci/${article.id}-${slug}`  // No 'pl' prefix
+                            : `/uk/aktualnosci/${article.id}-${slug}`;  // 'uk' prefix for Ukrainian
+
+                        console.log(articleUrl);
                         return (
                             <div className="col-md-4" key={article.id}>
                                 <Link href={articleUrl}>
@@ -110,7 +115,7 @@ export default async function News() {
                                             <ul className="post-meta d-flex mb-0">
                                                 <li className="post-date">
                                                     <i className="uil uil-calendar-alt"></i>
-                                                    <span>{format(new Date(article.attributes.data), 'dd MMMM yyyy', { locale: pl })}</span>
+                                                    <span>{format(new Date(article.attributes.data), 'dd MMMM yyyy', { locale: dateLocale })}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -119,12 +124,9 @@ export default async function News() {
                             </div>
                         );
                     })}
-
-
                 </div>
-
             </div>
         </>
     );
-};
+}
 

@@ -4,6 +4,8 @@ import Social from "./social";
 import Language from "./language";
 import ColorModeSwitcher from "@/components/reuseable/ColorModeSwitcher";
 import AccessibilityButton from "@/components/reuseable/AccessibilityButton";
+import { useLocale } from "next-intl";
+import { Link, type Locale } from "../../../../i18n.config";
 
 // ===================================================================
 interface HeaderRightProps {
@@ -28,11 +30,11 @@ export default function HeaderRight({
   navOtherClass,
   colorModeSwitcher,
 }: HeaderRightProps) {
+
+  const locale = useLocale() as Locale;
   return (
     <div className={navOtherClass}>
       <ul className="navbar-nav flex-row align-items-center ms-auto">
-        {/* ============= language dropdwown ============= */}
-        {language ? <Language /> : null}
 
         {/* ============= info button ============= */}
         {info ? (
@@ -54,7 +56,9 @@ export default function HeaderRight({
 
         {/* ============= contact button ============= */}
         {button ? <li className="nav-item d-none d-md-block">{button}</li> : null}
-
+        {/* ============= language dropdwown ============= */}
+        {/* {language ? <Language locale={"pl-pl"} /> : null} */}
+        <Language locale={locale} />
         {/* ============= shopping cart button ============= */}
         {cart ? (
           <li className="nav-item">

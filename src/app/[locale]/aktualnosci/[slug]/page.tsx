@@ -25,7 +25,7 @@ async function getStrapiData(id: string) {
 
 
 export default async function BlogDetailsTemplate({ params }: { params: { slug: string } }) {
-
+    console.log("to tu " + params)
     const id = params.slug.split('-')[0]
     const { data } = await getStrapiData(id);
     const title = data.attributes.tytul;

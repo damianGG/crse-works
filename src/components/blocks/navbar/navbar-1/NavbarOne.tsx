@@ -1,20 +1,16 @@
 "use client";
 
-import { Fragment, ReactElement, SetStateAction, useRef } from "react";
-// -------- CUSTOM HOOKS -------- //
+import { Fragment, ReactElement, useRef } from "react";
+import { usePathname } from 'next/navigation'
 import useSticky from "@/hooks/useSticky";
 import useNestedDropdown from "@/hooks/useNestedDropdown";
-// -------- CUSTOM COMPONENTS -------- //
-//import NextLink from "@/components/reuseable/links/Link";
 import Image from "next/image";
 import Link from "next/link";
-// LOCAL CUSTOM COMPONENTS
 import HeaderRight from "../components/header-right";
 import FancyHeader from "../components/fancy-header";
 import JPLogo from "../../../../../public/img/logos/logo-workts.jpg";
 import Toplogo from "../top-logo/Toplogo";
 
-// ===================================================================
 interface NavbarProps {
   info?: boolean;
   cart?: boolean;
@@ -28,7 +24,6 @@ interface NavbarProps {
   button?: ReactElement;
   navOtherClass?: string;
 }
-// ===================================================================
 
 export default function NavbarOne({
   fancy,
@@ -38,38 +33,42 @@ export default function NavbarOne({
   info = false,
   social = false,
   search = false,
-  language = false,
+  language = true,
   stickyBox = true,
   navOtherClass = "navbar-other w-100 d-flex ms-auto",
-  navClassName = "navbar navbar-expand-lg center-nav transparent navbar-light mt-5 mb-5"
+  navClassName = "navbar navbar-expand-lg center-nav transparent navbar-light mt-5 mb-5",
+
 }: NavbarProps) {
   useNestedDropdown();
   const sticky = useSticky(350);
   const navbarRef = useRef<HTMLElement | null>(null);
 
-  // dynamically render the logo
+  const pathname = usePathname() // Get the current URL path
+  console.log(pathname)
+  // Check if URL contains "/pl"
+  const isPolishLocale = pathname.includes('/pl');
 
+  const getLocalizedPath = (slug: string) => {
+    const localePrefix = isPolishLocale ? '/pl' : '/uk';  // If the current locale is "pl", use "/pl", otherwise use "/uk"
+    return `${localePrefix}${slug}`;
+  };
 
-  // dynamically added navbar className
+  // Dynamically added navbar className
   const fixedClassName = "navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed ";
 
-  // all main header contents
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100">
-        <Link href="/" >
+        <Link href={getLocalizedPath('/')} >
           <Image
             src={JPLogo}
-
-            alt="logo firmy JP"
-
+            alt={logoAlt || "logo firmy JP"}
             style={{
               width: '100%',
               height: 'auto',
               maxWidth: '150px',
             }}
           />
-
         </Link>
       </div>
 
@@ -81,14 +80,12 @@ export default function NavbarOne({
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul className="navbar-nav ">
-            {/* <PagesNavItem /> */}
-            <li><Link className="nav-link fs-20" href="/o-projekcie">O Projekcie</Link></li>
-
-            <li><Link className="nav-link fs-20" href="/aktualnosci">Aktualności</Link></li>
-            <li><Link className="nav-link fs-20" href="/rekrutacja">Rekrutacja</Link></li>
-            <li><Link className="nav-link fs-20" href="/kontakt">Kontakt</Link></li>
+            {/* Here you dynamically switch text based on the URL locale */}
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/o-projekcie')}>{isPolishLocale ? "O Projekcie" : "Про проєкт"}</Link></li>
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/aktualnosci')}>{isPolishLocale ? "Aktualności" : "Новини"}</Link></li>
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/rekrutacja')}>{isPolishLocale ? "Rekrutacja" : "Реєстрація"}</Link></li>
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/kontakt')}>{isPolishLocale ? "Kontakt" : "Контакт"}</Link></li>
           </ul>
-
 
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
@@ -96,8 +93,6 @@ export default function NavbarOne({
               <Link title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
               <br />
               <Link href="tel:0123456789" title="00 (123) 456 78 90" />
-              <br />
-              {/* <SocialLinks /> */}
             </div>
           </div>
         </div>
@@ -127,7 +122,6 @@ export default function NavbarOne({
           <FancyHeader>{headerContent}</FancyHeader>
         ) : (
           <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
-
         )}
       </nav>
     </Fragment>

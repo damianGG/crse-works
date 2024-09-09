@@ -1,9 +1,10 @@
 
 import Process7 from "@/components/blocks/process/Process7";
+import Process7UK from "@/components/blocks/process/Process7UK";
 
 
 
-export default function News() {
+export default function News({ params: { locale } }: { params: { locale: string } }) {
     return (
         <>
             <section
@@ -33,15 +34,23 @@ export default function News() {
                 >
                     <div className="row">
                         <div className="col-md-9 col-lg-7 col-xl-5 mx-auto">
+                            {/* Dynamiczny nagłówek na podstawie locale */}
                             <h1 className="display-1 mb-3" style={{ color: 'white' }}>
-                                Rekrutacja
+                                {locale === 'pl' ? 'Rekrutacja' : 'Набір'}
                             </h1>
-                            <p className="lead px-xxl-10" style={{ color: 'white' }}>Sprawdź jak wygląda proces rekrutacji</p>
+                            {/* Dynamiczny podtytuł na podstawie locale */}
+                            <p className="lead px-xxl-10" style={{ color: 'white' }}>
+                                {locale === 'pl'
+                                    ? 'Sprawdź jak wygląda proces rekrutacji'
+                                    : 'Дізнайтесь, як проходить процес набору'}
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
-            <Process7 />
+            {locale === 'pl' && <Process7 />}
+            {locale === 'uk' && <Process7UK />}
+
         </>
     );
 };
