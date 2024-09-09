@@ -39,7 +39,7 @@ export default async function RootLayout({
 
     <html lang={locale} data-bs-theme="light">
       <head>
-        {/* <link rel="icon" type="image/x-icon" sizes="16x16" href="/img/favicon.ico" /> */}
+        <link rel="icon" type="image/x-icon" sizes="16x16" href="/img/favicon.ico" />
       </head>
       <body className={manrope.className}>
         <NavbarOne button={<Link title="Contact" href="/rekrutacja" className="btn btn-sm btn-primary rounded-pill">Zapisz się</Link>} />
