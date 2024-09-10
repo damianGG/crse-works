@@ -2,7 +2,7 @@ import Link from "next/link";
 // CUSTOM UTILS
 import { slideInDownAnimate, zoomInAnimate } from "@/utils/animation";
 import Image from "next/image";
-import MainPhoto from "../../../../public/img/photos/main_photo.jpg";
+import MainPhoto from "../../../../public/img/photos/main_photo2.jpg";
 
 export default function Hero4() {
   return (
