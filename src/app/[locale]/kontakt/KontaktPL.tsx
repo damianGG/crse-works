@@ -65,7 +65,7 @@ export default function Kontakt() {
                 </div>
                 <div className="row mt-10">
                     <div className="col text-center">
-                        <h2>Work &amp; Training Service Janusz Żuczek</h2>
+                        <h2>Work &amp; Training Service Sp. z o.o.</h2>
                         <p><strong>Adres: </strong> Sielec 1A 39-120 Sędziszów Małopolski</p>
                         <p><strong>Strona: </strong><Link href="http://workts.pl/" className="link-primary" target="_blank">www.workts.pl</Link></p>
                         {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
