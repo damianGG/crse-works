@@ -52,6 +52,7 @@ export default function News({ params: { locale } }: { params: { locale: string 
                     </div>
                 </div>
             </section>
+
             {locale === 'pl' && <Process7 />}
             {locale === 'uk' && <Process7UK />}
             {locale === 'en' && <Process7EN />}

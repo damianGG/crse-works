@@ -25,8 +25,8 @@ export async function getStrapiData() {
 
 export default async function Process7() {
 
-  // const dataFromStrapi = await getStrapiData();
-  // const data = dataFromStrapi.data;
+  const dataFromStrapi = await getStrapiData();
+  const data = dataFromStrapi.data;
 
   return (
     <>
@@ -123,7 +123,7 @@ export default async function Process7() {
             </div>
             <p>Prosimy o drukowanie dokumentów rekrutacyjnych w kolorze. Wersja czarno-biała dotyczy sytuacji braku możliwości wydruku w kolorze.</p>
             <div className="col-lg-12 order-lg-2">
-              {/* {data.map((item: any) => (
+              {data.map((item: any) => (
                 <DownloadList
                   title={item.attributes.tytul}
                   link1={item.attributes.kolorowy.data[0]?.attributes.url}
@@ -131,7 +131,7 @@ export default async function Process7() {
                   key={item.id}
                   className="mb-5"
                 />
-              ))} */}
+              ))}
             </div>
 
 
