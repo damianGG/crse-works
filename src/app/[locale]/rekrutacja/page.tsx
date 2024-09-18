@@ -1,8 +1,6 @@
-
 import Process7 from "@/components/blocks/process/Process7";
+import Process7EN from "@/components/blocks/process/Process7EN";
 import Process7UK from "@/components/blocks/process/Process7UK";
-
-
 
 export default function News({ params: { locale } }: { params: { locale: string } }) {
     return (
@@ -14,7 +12,7 @@ export default function News({ params: { locale } }: { params: { locale: string 
                     backgroundPosition: 'right',
                     backgroundImage: 'url(/_next/static/media/flaga-ue-tlo.a9057970.png)',
                     backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundRepeat: 'no-repeat',
                 }}
             >
                 <div
@@ -25,7 +23,7 @@ export default function News({ params: { locale } }: { params: { locale: string 
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)'
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
                     }}
                 />
                 <div
@@ -34,15 +32,21 @@ export default function News({ params: { locale } }: { params: { locale: string 
                 >
                     <div className="row">
                         <div className="col-md-9 col-lg-7 col-xl-5 mx-auto">
-                            {/* Dynamiczny nagłówek na podstawie locale */}
+                            {/* Dynamic header based on locale */}
                             <h1 className="display-1 mb-3" style={{ color: 'white' }}>
-                                {locale === 'pl' ? 'Rekrutacja' : 'Набір'}
+                                {locale === 'pl'
+                                    ? 'Rekrutacja'
+                                    : locale === 'en'
+                                        ? 'Recruitment'
+                                        : 'Набір'}
                             </h1>
-                            {/* Dynamiczny podtytuł na podstawie locale */}
+                            {/* Dynamic subtitle based on locale */}
                             <p className="lead px-xxl-10" style={{ color: 'white' }}>
                                 {locale === 'pl'
                                     ? 'Sprawdź jak wygląda proces rekrutacji'
-                                    : 'Дізнайтесь, як проходить процес набору'}
+                                    : locale === 'en'
+                                        ? 'Find out how the recruitment process works'
+                                        : 'Дізнайтесь, як проходить процес набору'}
                             </p>
                         </div>
                     </div>
@@ -50,8 +54,7 @@ export default function News({ params: { locale } }: { params: { locale: string 
             </section>
             {locale === 'pl' && <Process7 />}
             {locale === 'uk' && <Process7UK />}
-
+            {locale === 'en' && <Process7EN />}
         </>
     );
-};
-
+}

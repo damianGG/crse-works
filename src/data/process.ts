@@ -58,6 +58,50 @@ export const processList1 = [
   },
 
 ];
+export const processListEN = [
+  {
+    no: "1",
+    className: "me-lg-6",
+    title: "A person aged 18 or older",
+    subtitle: "",
+    shadow: true
+  },
+  {
+    no: "2",
+    title: "A person residing in the Warmian-Masurian Voivodeship",
+    className: "me-lg-6 mt-6",
+    shadow: true,
+    subtitle: ""
+  },
+  {
+    no: "3",
+    title: "An unemployed person",
+    className: "me-lg-6 mt-6",
+    subtitle: "",
+    shadow: true
+  },
+  {
+    no: "4",
+    title: "An economically inactive person",
+    className: "me-lg-6 mt-6",
+    subtitle: "",
+    shadow: true
+  },
+  {
+    no: "5",
+    title: "An employed person",
+    className: "me-lg-6 mt-6",
+    subtitle: "",
+    shadow: true
+  },
+  {
+    no: "6",
+    title: "Third-country nationals, including migrants and their families",
+    className: "me-lg-6 mt-6",
+    subtitle: "",
+    shadow: true
+  },
+];
 export const processList1UK = [
   {
     no: "1",
@@ -163,64 +207,124 @@ export const doPobrania = [
   
 
 ];
-export const doPobraniaUK = [
+export const doPobraniaEN = [
   {
     no: "1",
     className: "me-lg-6 text-start",
-    title: "Реєстраційна форма",
-    subtitle: "додаток № 1 до Регламенту рекрутації та участі в проєкті",
+    title: "Recruitment form",
+    subtitle: "Annex no. 1 to the Recruitment and Participation Regulations in the project",
     shadow: true
   },
   {
     no: "2",
-    title: "Копія документа, що підтверджує громадянство",
+    title: "Copy of a document confirming citizenship",
     className: "me-lg-6 mt-6 text-start",
-    subtitle: "тобто, наприклад, паспорт, віза, карта постійного/тимчасового проживання (у разі відсутності польського громадянства);",
+    subtitle: "e.g., passport, visa, permanent/temporary residence card (in the case of non-Polish citizenship);",
     shadow: true
   },
   {
     no: "3",
-    title: "Документ, що підтверджує місце проживання на території Вармінсько-Мазурського воєводства",
+    title: "Document confirming residence in the Warmian-Masurian Voivodeship",
     className: "me-lg-6 mt-6 text-start",
-    subtitle: "(наприклад, довідка з міської/сільської ради або декларація про відходи, або акт власності на житло, або договір оренди житла, або PIT, або рахунок, наприклад, за телефон (де вказано адресу місця проживання), або у випадку осіб, які отримують допомогу, наприклад, 800 плюс або дитячий ваучер або виплати з сімейного капіталу опіки - рішення, видане з цього питання, де зазначено адресу місця проживання заявника, або документ з ZUS, що підтверджує реєстрацію на страхування та місце проживання учасниці проєкту);",
+    subtitle: "(e.g., certificate from the City/Municipality Office or a waste declaration or a deed of ownership of a residential property or a rental agreement for a residential property or PIT or invoice, e.g., for a phone (where the residential address is indicated), or for people receiving benefits like 800 plus, childcare benefits, or family capital - a decision issued where the applicant's residential address is indicated, or a document from ZUS confirming insurance registration and the participant's place of residence);",
     shadow: true
   },
   {
     no: "4",
-    title: "Рішення про ступінь інвалідності",
+    title: "Disability degree certificate",
     className: "me-lg-6 mt-6 text-start",
     shadow: true,
-    subtitle: "інвалідності згідно з законом від 27 серпня 1997 р. про професійну і соціальну реабілітацію та працевлаштування осіб з інвалідністю (Закон Польщі 2023 р., п. 100, з подальшими змінами) або рішення чи інший документ, про який йдеться в законі від 19 серпня 1994 р. про охорону психічного здоров'я (Закон Польщі 2022 р., п. 2123)(якщо стосується);"
+    subtitle: "as defined by the Act of 27 August 1997 on professional and social rehabilitation and employment of disabled persons (Journal of Laws of 2023, item 100, as amended) or a ruling or other document referred to in the Act of 19 August 1994 on the protection of mental health (Journal of Laws of 2022, item 2123) (if applicable);"
   },
   {
     no: "5",
-    title: "Заява про кризу бездомності або виключення з доступу до житла (якщо стосується);",
+    title: "Statement on homelessness crisis or exclusion from access to housing (if applicable);",
     className: "me-lg-6 mt-6 text-start",
     shadow: true,
     subtitle: ""
   },
   {
     no: "6",
-    title: "Заява про кризу бездомності або виключення з доступу до житла (якщо стосується);",
+    title: "Statement on homelessness crisis or exclusion from access to housing (if applicable);",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "",
     shadow: true
   },
   {
     no: "7",
-    title: "Інформаційна заява Керуючої Інституції",
+    title: "Information clause of the Managing Institution",
     className: "me-lg-6 mt-6 text-start",
-    subtitle: "додаток № 2 до Регламенту рекрутації та участі в проєкті; - обов'язково",
+    subtitle: "Annex no. 2 to the Recruitment and Participation Regulations in the project; - mandatory",
     shadow: true,
   },
   {
     no: "8",
-    title: "Інформаційна заява Посередницької Інституції",
+    title: "Information clause of the Intermediary Institution",
     className: "me-lg-6 mt-6 text-start",
-    subtitle: "додаток № 3 до Регламенту рекрутації та участі в проєкті",
+    subtitle: "Annex no. 3 to the Recruitment and Participation Regulations in the project",
     shadow: true,
   },
 ];
+export const doPobraniaUK = [
+  {
+    no: "1",
+    className: "me-lg-6 text-start",
+    title: "Реєстраційна форма",
+    subtitle: "додаток №1 до Регламенту рекрутингу та участі в проекті",
+    shadow: true
+  },
+  {
+    no: "2",
+    title: "Копія документа, що підтверджує громадянство",
+    className: "me-lg-6 mt-6 text-start",
+    subtitle: "тобто, наприклад, паспорт, віза, картка постійного/тимчасового проживання (у разі відсутності польського громадянства);",
+    shadow: true
+  },
+  {
+    no: "3",
+    title: "Документ, що підтверджує місце проживання на території Вармінсько-Мазурського воєводства",
+    className: "me-lg-6 mt-6 text-start",
+    subtitle: "(наприклад, довідка з міської/гмінної адміністрації або декларація про сміття, акт власності на житлове приміщення, договір оренди житлового приміщення, PIT або рахунок, наприклад, за телефон (де вказана адреса місця проживання), або для осіб, які отримують допомогу, наприклад, 800 плюс, дитячі ваучери або виплати з сімейного капіталу - рішення, в якому зазначено адресу місця проживання заявника, або документ із ZUS, що підтверджує реєстрацію в страховій системі та місце проживання учасника проекту);",
+    shadow: true
+  },
+  {
+    no: "4",
+    title: "Довідка про ступінь інвалідності",
+    className: "me-lg-6 mt-6 text-start",
+    shadow: true,
+    subtitle: "інвалідність відповідно до Закону від 27 серпня 1997 р. про професійну та соціальну реабілітацію та працевлаштування інвалідів (Журнал законів 2023 р., ст. 100, з пізнішими змінами) або висновок або інший документ, згаданий у Законі від 19 серпня 1994 р. про охорону психічного здоров'я (Журнал законів 2022 р., ст. 2123) (за необхідності);"
+  },
+  {
+    no: "5",
+    title: "Заява про кризу бездомності або виключення з доступу до житла (за необхідності);",
+    className: "me-lg-6 mt-6 text-start",
+    shadow: true,
+    subtitle: ""
+  },
+  {
+    no: "6",
+    title: "Заява про кризу бездомності або виключення з доступу до житла (за необхідності);",
+    className: "me-lg-6 mt-6 text-start",
+    subtitle: "",
+    shadow: true
+  },
+  {
+    no: "7",
+    title: "Інформаційне положення Управляючого органу",
+    className: "me-lg-6 mt-6 text-start",
+    subtitle: "додаток №2 до Регламенту рекрутингу та участі в проекті; - обов'язково",
+    shadow: true,
+  },
+  {
+    no: "8",
+    title: "Інформаційне положення Посередницького органу",
+    className: "me-lg-6 mt-6 text-start",
+    subtitle: "додаток №3 до Регламенту рекрутингу та участі в проекті",
+    shadow: true,
+  },
+];
+
+
 export const doPobrania2 = [
   {
     no: "",

@@ -28,12 +28,12 @@ export default function DownloadList({ title, className = '', shadow, link1, lin
               <h4 className="mb-1 text-start">{title}</h4>
             </div>
             <div className="d-flex">
-              <Link href={`${backendLink}${link1}`} >
+              <Link href={`${link1}`} >
                 <span className="icon btn btn-circle btn-lg btn-soft-primary pe-none me-2 me-md-4">
                   <span className="number"><i className="uil uil-file-download fs-40"></i></span>
                 </span>
               </Link>
-              <Link href={`${backendLink}${link2}`} >
+              <Link href={`${link2}`} >
                 <span className="icon btn btn-circle btn-lg btn-soft-primary pe-none me-0 me-md-4" style={{ backgroundColor: "white" }}>
                   <span className="number" style={{ color: "black" }}><i className="uil uil-file-download fs-40"></i></span>
                 </span>

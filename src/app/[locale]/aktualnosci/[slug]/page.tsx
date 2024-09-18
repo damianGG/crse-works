@@ -70,7 +70,7 @@ export default async function BlogDetailsTemplate({ params }: { params: { slug: 
                             <div className="blog single mt-n17">
                                 <div className="card">
                                     {photoURL && (
-                                        <FigureImage width={960} height={600} src={backendLink + photoURL} className="card-img-top" />
+                                        <FigureImage width={960} height={600} src={photoURL} className="card-img-top" />
                                     )}
                                     {downloadURL && (
                                         <div className='d-flex align-self-center mt-10'>

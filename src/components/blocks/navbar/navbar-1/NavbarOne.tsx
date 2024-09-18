@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, ReactElement, useRef } from "react";
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 import useSticky from "@/hooks/useSticky";
 import useNestedDropdown from "@/hooks/useNestedDropdown";
 import Image from "next/image";
@@ -43,14 +43,18 @@ export default function NavbarOne({
   const sticky = useSticky(350);
   const navbarRef = useRef<HTMLElement | null>(null);
 
-  const pathname = usePathname() // Get the current URL path
-  console.log(pathname)
-  // Check if URL contains "/pl"
+  const pathname = usePathname(); // Get the current URL path
+
+  // Check if URL contains "/pl", "/uk", or "/en" to determine locale
   const isPolishLocale = pathname.includes('/pl');
+  const isUkrainianLocale = pathname.includes('/ue');
+  const isEnglishLocale = pathname.includes('/en');
 
   const getLocalizedPath = (slug: string) => {
-    const localePrefix = isPolishLocale ? '/pl' : '/uk';  // If the current locale is "pl", use "/pl", otherwise use "/uk"
-    return `${localePrefix}${slug}`;
+    // Determine the correct prefix for the URL based on the current locale
+    if (isPolishLocale) return `/pl${slug}`;
+    if (isUkrainianLocale) return `/uk${slug}`;
+    return `/en${slug}`; // Default to English if none match
   };
 
   // Dynamically added navbar className
@@ -59,10 +63,10 @@ export default function NavbarOne({
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100">
-        <Link href={getLocalizedPath('/')} >
+        <Link href={getLocalizedPath('/')}>
           <Image
             src={JPLogo}
-            alt={logoAlt || "logo firmy JP"}
+            alt={logoAlt || "JP company logo"}
             style={{
               width: '100%',
               height: 'auto',
@@ -80,14 +84,22 @@ export default function NavbarOne({
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul className="navbar-nav ">
-            {/* Here you dynamically switch text based on the URL locale */}
-            <li><Link className="nav-link fs-20" href={getLocalizedPath('/o-projekcie')}>{isPolishLocale ? "O Projekcie" : "Про проєкт"}</Link></li>
-            <li><Link className="nav-link fs-20" href={getLocalizedPath('/aktualnosci')}>{isPolishLocale ? "Aktualności" : "Новини"}</Link></li>
-            <li><Link className="nav-link fs-20" href={getLocalizedPath('/rekrutacja')}>{isPolishLocale ? "Rekrutacja" : "Реєстрація"}</Link></li>
-            <li><Link className="nav-link fs-20" href={getLocalizedPath('/kontakt')}>{isPolishLocale ? "Kontakt" : "Контакт"}</Link></li>
+            {/* Dynamically switch text based on the current locale */}
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/o-projekcie')}>
+              {isPolishLocale ? "O Projekcie" : isUkrainianLocale ? "Про проєкт" : "About the Project"}
+            </Link></li>
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/aktualnosci')}>
+              {isPolishLocale ? "Aktualności" : isUkrainianLocale ? "Новини" : "News"}
+            </Link></li>
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/rekrutacja')}>
+              {isPolishLocale ? "Rekrutacja" : isUkrainianLocale ? "Реєстрація" : "Recruitment"}
+            </Link></li>
+            <li><Link className="nav-link fs-20" href={getLocalizedPath('/kontakt')}>
+              {isPolishLocale ? "Kontakt" : isUkrainianLocale ? "Контакт" : "Contact"}
+            </Link></li>
           </ul>
 
-          {/* ============= show contact info in the small device sidebar ============= */}
+          {/* Contact info displayed in small device sidebar */}
           <div className="offcanvas-footer d-lg-none">
             <div>
               <Link title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
@@ -98,7 +110,7 @@ export default function NavbarOne({
         </div>
       </div>
 
-      {/* ============= right side header content ============= */}
+      {/* Right side header content */}
       <HeaderRight
         cart={cart}
         info={info}

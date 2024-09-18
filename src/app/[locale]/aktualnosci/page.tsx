@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { format } from 'date-fns';
-import { pl, uk } from 'date-fns/locale';
+import { pl, uk, enUS } from 'date-fns/locale'; // Added enUS for English
 import './style.css';
 import flagaUe from '@/icons/flaga-ue-tlo.png';
 
@@ -43,10 +43,14 @@ function createSlug(text: string): string {
 // Now using Next.js 13+ dynamic routing and server-side data fetching
 export default async function News({ params }: { params: { locale: string } }) {
     // Determine the locale from the URL params
-    const locale = params.locale === 'pl' ? 'pl' : 'uk-UA';
+    const locale = ['pl', 'uk-UA', 'en-US'].includes(params.locale) ? params.locale : 'en'; // Added English as the default locale
 
     // Fetch data dynamically based on locale
     const { data } = await getStrapiData(locale);
+
+    // Set the appropriate locale for date formatting
+    const dateLocale = locale === 'pl' ? pl : locale === 'uk-UA' ? uk : enUS;
+    console.log(dateLocale)
 
     return (
         <>
@@ -78,7 +82,7 @@ export default async function News({ params }: { params: { locale: string } }) {
                     <div className="row">
                         <div className="col-md-9 col-lg-7 col-xl-5 mx-auto">
                             <h1 className="display-1 mb-3" style={{ color: 'white' }}>
-                                {locale === 'pl' ? 'Aktulaności' : 'Новини'}
+                                {locale === 'pl' ? 'Aktualności' : locale === 'uk-UA' ? 'Новини' : 'News'}
                             </h1>
                             <p className="lead px-xxl-10"></p>
                         </div>
@@ -90,15 +94,14 @@ export default async function News({ params }: { params: { locale: string } }) {
 
                     {data.map((article: any) => {
                         const slug = createSlug(article.attributes.tytul);
-                        const dateLocale = locale === 'pl' ? pl : uk;
-                        console.log(locale);
 
-                        // Generate article URL: without 'pl' prefix for Polish, with 'uk' for Ukrainian
+                        // Generate article URL: without 'pl' prefix for Polish, 'uk' for Ukrainian, 'en' for English
                         const articleUrl = locale === 'pl'
-                            ? `/pl/aktualnosci/${article.id}-${slug}`  // No 'pl' prefix
-                            : `/uk/aktualnosci/${article.id}-${slug}`;  // 'uk' prefix for Ukrainian
+                            ? `/pl/aktualnosci/${article.id}-${slug}`  // No 'pl' prefix for Polish
+                            : locale === 'uk-UA'
+                                ? `/uk/aktualnosci/${article.id}-${slug}`  // 'uk' prefix for Ukrainian
+                                : `/en/aktualnosci/${article.id}-${slug}`;  // 'en' prefix for English
 
-                        console.log(articleUrl);
                         return (
                             <div className="col-md-4" key={article.id}>
                                 <Link href={articleUrl}>
@@ -129,4 +132,3 @@ export default async function News({ params }: { params: { locale: string } }) {
         </>
     );
 }
-

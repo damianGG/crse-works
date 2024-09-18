@@ -1,0 +1,20 @@
+{
+    "HomePage": {
+        "title": "Strona główna",
+        "about": "O nas"
+    },
+    "Menu": {
+        "o-projekcie": "Strona główna",
+        "aktualnosci": "Aktualności",
+        "kontakt": "Kontakt",
+        "rejestracja": "Rejestracja",
+        "zapiszSie": "Zapisz się"
+    },
+    "Footer": {
+        "adress": "Adres",
+        "aktualnosci": "Aktualności",
+        "kontakt": "Kontakt",
+        "rejestracja": "Rejestracja",
+        "zapiszSie": "Zapisz się"
+    }
+}

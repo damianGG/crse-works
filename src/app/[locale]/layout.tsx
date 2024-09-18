@@ -10,6 +10,7 @@ import AccessibilityButton from "@/components/reuseable/AccessibilityButton";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { getMessages } from 'next-intl/server';
 import FooterBase from "@/components/blocks/footer/FooterBase";
+import LanguageSwitcher from "@/components/reuseable/LanguageSwitcher";
 
 
 
@@ -42,7 +43,7 @@ export default async function RootLayout({
         <link rel="icon" type="image/x-icon" sizes="16x16" href="/img/favicon.ico" />
       </head>
       <body className={manrope.className}>
-        <NavbarOne button={<Link title="Contact" href="/rekrutacja" className="btn btn-sm btn-primary rounded-pill">Zapisz się</Link>} />
+        <NavbarOne button={<Link title="Contact" href="/rekrutacja" className="btn btn-sm btn-primary rounded-pill"><LanguageSwitcher /></Link>} />
 
         <AccessibilityButton />
         <div>{children}</div>
