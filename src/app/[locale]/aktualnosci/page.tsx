@@ -43,8 +43,9 @@ function createSlug(text: string): string {
 // Now using Next.js 13+ dynamic routing and server-side data fetching
 export default async function News({ params }: { params: { locale: string } }) {
     // Determine the locale from the URL params
-    const locale = ['pl', 'uk-UA', 'en-US'].includes(params.locale) ? params.locale : 'en'; // Added English as the default locale
+    const locale = ['pl', 'uk', 'en'].includes(params.locale) ? params.locale : 'en'; // Added English as the default locale
 
+    console.log(locale)
     // Fetch data dynamically based on locale
     const { data } = await getStrapiData(locale);
 
@@ -82,7 +83,8 @@ export default async function News({ params }: { params: { locale: string } }) {
                     <div className="row">
                         <div className="col-md-9 col-lg-7 col-xl-5 mx-auto">
                             <h1 className="display-1 mb-3" style={{ color: 'white' }}>
-                                {locale === 'pl' ? 'Aktualności' : locale === 'uk-UA' ? 'Новини' : 'News'}
+                                {locale === 'pl' ? 'Aktualności' : locale === 'uk' ? 'Новини' : 'News'}
+
                             </h1>
                             <p className="lead px-xxl-10"></p>
                         </div>
@@ -98,7 +100,7 @@ export default async function News({ params }: { params: { locale: string } }) {
                         // Generate article URL: without 'pl' prefix for Polish, 'uk' for Ukrainian, 'en' for English
                         const articleUrl = locale === 'pl'
                             ? `/pl/aktualnosci/${article.id}-${slug}`  // No 'pl' prefix for Polish
-                            : locale === 'uk-UA'
+                            : locale === 'uk'
                                 ? `/uk/aktualnosci/${article.id}-${slug}`  // 'uk' prefix for Ukrainian
                                 : `/en/aktualnosci/${article.id}-${slug}`;  // 'en' prefix for English
 

@@ -47,7 +47,7 @@ export default function NavbarOne({
 
   // Check if URL contains "/pl", "/uk", or "/en" to determine locale
   const isPolishLocale = pathname.includes('/pl');
-  const isUkrainianLocale = pathname.includes('/ue');
+  const isUkrainianLocale = pathname.includes('/uk');
   const isEnglishLocale = pathname.includes('/en');
 
   const getLocalizedPath = (slug: string) => {
@@ -78,7 +78,7 @@ export default function NavbarOne({
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
         <div className="offcanvas-header d-lg-none">
-          <h3 className="text-white fs-30 mb-0">J&P</h3>
+          <h3 className="text-white fs-30 mb-0">Workts</h3>
           <button type="button" aria-label="Close" data-bs-dismiss="offcanvas" className="btn-close btn-close-white" />
         </div>
 
