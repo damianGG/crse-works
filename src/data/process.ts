@@ -37,7 +37,7 @@ export const processList1 = [
   },
   {
     no: "4",
-    title: "Osoba bierna zawodowo,",
+    title: "Osoba bierna zawodowo",
     className: "me-lg-6 mt-6",
     subtitle: "",
     shadow: true
@@ -51,7 +51,7 @@ export const processList1 = [
   },
   {
     no: "6",
-    title: "Obywateli państw trzecich, w tym migrantów oraz ich rodzin.",
+    title: "Obywateli państw trzecich, w tym migrantów oraz ich rodzin",
     className: "me-lg-6 mt-6",
     subtitle: "",
     shadow: true
@@ -184,13 +184,6 @@ export const doPobrania = [
   },
   {
     no: "6",
-    title: "Oświadczenie o kryzysie bezdomności lub dotknięciu wykluczeniem z dostępu do mieszkań (jeśli dotyczy);",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "",
-    shadow: true
-  },
-  {
-    no: "7",
     title: "Klauzula informacyjna Instytucji Zarządzającej",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "załącznik nr 2 do Regulaminu rekrutacji i uczestnictwa w projekcie; - obligatoryjnie",
@@ -198,7 +191,7 @@ export const doPobrania = [
   },
   ,
   {
-    no: "8",
+    no: "7",
     title: "Klauzula informacyjnna Instytucji Pośredniczącej ",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "załącznik nr 3 do Regulaminu rekrutacji i uczestnictwa w projekcie",
@@ -245,20 +238,13 @@ export const doPobraniaEN = [
   },
   {
     no: "6",
-    title: "Statement on homelessness crisis or exclusion from access to housing (if applicable);",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "",
-    shadow: true
-  },
-  {
-    no: "7",
     title: "Information clause of the Managing Institution",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "Annex no. 2 to the Recruitment and Participation Regulations in the project; - mandatory",
     shadow: true,
   },
   {
-    no: "8",
+    no: "7",
     title: "Information clause of the Intermediary Institution",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "Annex no. 3 to the Recruitment and Participation Regulations in the project",
@@ -303,20 +289,13 @@ export const doPobraniaUK = [
   },
   {
     no: "6",
-    title: "Заява про кризу бездомності або виключення з доступу до житла (за необхідності);",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "",
-    shadow: true
-  },
-  {
-    no: "7",
     title: "Інформаційне положення Управляючого органу",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "додаток №2 до Регламенту рекрутингу та участі в проекті; - обов'язково",
     shadow: true,
   },
   {
-    no: "8",
+    no: "7",
     title: "Інформаційне положення Посередницького органу",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "додаток №3 до Регламенту рекрутингу та участі в проекті",
