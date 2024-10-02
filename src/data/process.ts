@@ -44,7 +44,7 @@ export const processList1 = [
   },
   {
     no: "5",
-    title: "Osoba pracujące,",
+    title: "Osoba pracujące",
     className: "me-lg-6 mt-6",
     subtitle: "",
     shadow: true
@@ -177,14 +177,14 @@ export const doPobrania = [
   },
   {
     no: "5",
-    title: "Oświadczenie o kryzysie bezdomności lub dotknięciu wykluczeniem z dostępu domieszkań (jeśli dotyczy);",
+    title: "Oświadczenie o kryzysie bezdomności lub dotknięciu wykluczeniem z dostępu do mieszkań (jeśli dotyczy);",
     className: "me-lg-6 mt-6 text-start",
     shadow: true,
     subtitle: ""
   },
   {
     no: "6",
-    title: "Klauzula informacyjna Instytucji Zarządzającej",
+    title: "Klauzula informacyjna",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "załącznik nr 2 do Regulaminu rekrutacji i uczestnictwa w projekcie; - obligatoryjnie",
     shadow: true,
@@ -192,115 +192,113 @@ export const doPobrania = [
   ,
   {
     no: "7",
-    title: "Klauzula informacyjnna Instytucji Pośredniczącej ",
+    title: "Oświadczenie dotyczące osoby pracującej (jeśli dotyczy)",
     className: "me-lg-6 mt-6 text-start",
-    subtitle: "załącznik nr 3 do Regulaminu rekrutacji i uczestnictwa w projekcie",
+    subtitle: "załącznik nr 8 do Regulaminu rekrutacji i uczestnictwa w projekcie",
     shadow: true,
   },
-  
-
 ];
 export const doPobraniaEN = [
   {
-    no: "1",
-    className: "me-lg-6 text-start",
-    title: "Recruitment form",
-    subtitle: "Annex no. 1 to the Recruitment and Participation Regulations in the project",
-    shadow: true
+    "no": "1",
+    "className": "me-lg-6 text-start",
+    "title": "Recruitment Form",
+    "subtitle": "attachment no. 1 to the Recruitment and Participation Regulations in the project",
+    "shadow": true
   },
   {
-    no: "2",
-    title: "Copy of a document confirming citizenship",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "e.g., passport, visa, permanent/temporary residence card (in the case of non-Polish citizenship);",
-    shadow: true
+    "no": "2",
+    "title": "Copy of a document confirming citizenship",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "i.e., for example, passport, visa, permanent/temporary residence card (in case of lack of Polish citizenship);",
+    "shadow": true
   },
   {
-    no: "3",
-    title: "Document confirming residence in the Warmian-Masurian Voivodeship",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "(e.g., certificate from the City/Municipality Office or a waste declaration or a deed of ownership of a residential property or a rental agreement for a residential property or PIT or invoice, e.g., for a phone (where the residential address is indicated), or for people receiving benefits like 800 plus, childcare benefits, or family capital - a decision issued where the applicant's residential address is indicated, or a document from ZUS confirming insurance registration and the participant's place of residence);",
-    shadow: true
+    "no": "3",
+    "title": "Document confirming place of residence in the Warmian-Masurian Voivodeship",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "(e.g., certificate from the City/Gmina Office or waste declaration or deed of ownership of a residential premises or lease agreement of a residential premises or PIT or invoice, e.g., for a phone (where the address of residence is indicated) or in the case of persons receiving, e.g., 800 plus or nursery voucher or benefits from the family care capital - decision issued in this matter where the address of residence of the applicant is indicated or document from ZUS confirming registration for insurance and place of residence of the project participant);",
+    "shadow": true
   },
   {
-    no: "4",
-    title: "Disability degree certificate",
-    className: "me-lg-6 mt-6 text-start",
-    shadow: true,
-    subtitle: "as defined by the Act of 27 August 1997 on professional and social rehabilitation and employment of disabled persons (Journal of Laws of 2023, item 100, as amended) or a ruling or other document referred to in the Act of 19 August 1994 on the protection of mental health (Journal of Laws of 2022, item 2123) (if applicable);"
+    "no": "4",
+    "title": "Decision on the degree of disability",
+    "className": "me-lg-6 mt-6 text-start",
+    "shadow": true,
+    "subtitle": "disability within the meaning of the Act of August 27, 1997, on professional and social rehabilitation and employment of disabled persons (Dz. U. z 2023 r. poz. 100, as amended) or a decision or another document referred to in the Act of August 19, 1994, on mental health care (Dz. U. z 2022 r. poz. 2123) (if applicable);"
   },
   {
-    no: "5",
-    title: "Statement on homelessness crisis or exclusion from access to housing (if applicable);",
-    className: "me-lg-6 mt-6 text-start",
-    shadow: true,
-    subtitle: ""
+    "no": "5",
+    "title": "Statement on homelessness crisis or being affected by exclusion from access to housing (if applicable);",
+    "className": "me-lg-6 mt-6 text-start",
+    "shadow": true,
+    "subtitle": ""
   },
   {
-    no: "6",
-    title: "Information clause of the Managing Institution",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "Annex no. 2 to the Recruitment and Participation Regulations in the project; - mandatory",
-    shadow: true,
+    "no": "6",
+    "title": "Information clause",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "attachment no. 2 to the Recruitment and Participation Regulations in the project; - obligatory",
+    "shadow": true
   },
   {
-    no: "7",
-    title: "Information clause of the Intermediary Institution",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "Annex no. 3 to the Recruitment and Participation Regulations in the project",
-    shadow: true,
-  },
+    "no": "7",
+    "title": "Statement concerning a working person (if applicable)",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "attachment no. 8 to the Recruitment and Participation Regulations in the project",
+    "shadow": true
+  }
 ];
 export const doPobraniaUK = [
   {
-    no: "1",
-    className: "me-lg-6 text-start",
-    title: "Реєстраційна форма",
-    subtitle: "додаток №1 до Регламенту рекрутингу та участі в проекті",
-    shadow: true
+    "no": "1",
+    "className": "me-lg-6 text-start",
+    "title": "Реєстраційна форма",
+    "subtitle": "додаток №1 до Регламенту набору та участі у проєкті",
+    "shadow": true
   },
   {
-    no: "2",
-    title: "Копія документа, що підтверджує громадянство",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "тобто, наприклад, паспорт, віза, картка постійного/тимчасового проживання (у разі відсутності польського громадянства);",
-    shadow: true
+    "no": "2",
+    "title": "Копія документа, що підтверджує громадянство",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "тобто, наприклад, паспорт, віза, карта постійного/тимчасового проживання (у разі відсутності польського громадянства);",
+    "shadow": true
   },
   {
-    no: "3",
-    title: "Документ, що підтверджує місце проживання на території Вармінсько-Мазурського воєводства",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "(наприклад, довідка з міської/гмінної адміністрації або декларація про сміття, акт власності на житлове приміщення, договір оренди житлового приміщення, PIT або рахунок, наприклад, за телефон (де вказана адреса місця проживання), або для осіб, які отримують допомогу, наприклад, 800 плюс, дитячі ваучери або виплати з сімейного капіталу - рішення, в якому зазначено адресу місця проживання заявника, або документ із ZUS, що підтверджує реєстрацію в страховій системі та місце проживання учасника проекту);",
-    shadow: true
+    "no": "3",
+    "title": "Документ, що підтверджує місце проживання на території Вармінсько-Мазурського воєводства",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "(наприклад, довідка з міського/гмінного уряду або декларація про сміття, або акт власності на житлове приміщення, або договір оренди житлового приміщення, або PIT, або рахунок-фактура, наприклад, за телефон (де вказана адреса місця проживання), або у випадку осіб, які отримують, наприклад, 800 плюс, або дитячий ваучер, або допомоги з сімейного капіталу опіки - рішення, видане в цій справі, де вказано адресу місця проживання заявника, або документ із ZUS, що підтверджує реєстрацію до страхування та місце проживання учасниці проєкту);",
+    "shadow": true
   },
   {
-    no: "4",
-    title: "Довідка про ступінь інвалідності",
-    className: "me-lg-6 mt-6 text-start",
-    shadow: true,
-    subtitle: "інвалідність відповідно до Закону від 27 серпня 1997 р. про професійну та соціальну реабілітацію та працевлаштування інвалідів (Журнал законів 2023 р., ст. 100, з пізнішими змінами) або висновок або інший документ, згаданий у Законі від 19 серпня 1994 р. про охорону психічного здоров'я (Журнал законів 2022 р., ст. 2123) (за необхідності);"
+    "no": "4",
+    "title": "Рішення про ступінь інвалідності",
+    "className": "me-lg-6 mt-6 text-start",
+    "shadow": true,
+    "subtitle": "інвалідності у розумінні Закону від 27 серпня 1997 р. про професійну та соціальну реабілітацію та працевлаштування осіб з інвалідністю (Dz. U. z 2023 r. poz. 100, з пізн. зм.) або рішення чи іншого документа, про які йдеться в Законі від 19 серпня 1994 р. про охорону психічного здоров'я (Dz. U. z 2022 r. poz. 2123) (якщо стосується);"
   },
   {
-    no: "5",
-    title: "Заява про кризу бездомності або виключення з доступу до житла (за необхідності);",
-    className: "me-lg-6 mt-6 text-start",
-    shadow: true,
-    subtitle: ""
+    "no": "5",
+    "title": "Заява про кризу бездомності або підпадання під виключення з доступу до житла (якщо стосується);",
+    "className": "me-lg-6 mt-6 text-start",
+    "shadow": true,
+    "subtitle": ""
   },
   {
-    no: "6",
-    title: "Інформаційне положення Управляючого органу",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "додаток №2 до Регламенту рекрутингу та участі в проекті; - обов'язково",
-    shadow: true,
+    "no": "6",
+    "title": "Інформаційна заява",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "додаток №2 до Регламенту набору та участі у проєкті; - обов'язково",
+    "shadow": true
   },
   {
-    no: "7",
-    title: "Інформаційне положення Посередницького органу",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "додаток №3 до Регламенту рекрутингу та участі в проекті",
-    shadow: true,
-  },
+    "no": "7",
+    "title": "Заява щодо працюючої особи (якщо стосується)",
+    "className": "me-lg-6 mt-6 text-start",
+    "subtitle": "додаток №8 до Регламенту набору та участі у проєкті",
+    "shadow": true
+  }
 ];
 
 

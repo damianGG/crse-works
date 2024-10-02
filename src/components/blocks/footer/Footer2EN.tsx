@@ -34,7 +34,7 @@ export default function Footer2() {
                     <i className="uil uil-phone-alt me-2 fs-25"></i>Phone
                   </p>
                   <p>
-                    +48 696548883 <br />
+                    +48 880-310-980 <br />
                   </p>
                 </div>
               </div>

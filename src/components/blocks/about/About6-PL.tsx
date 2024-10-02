@@ -80,7 +80,8 @@ export default function About6() {
             <p className="">Komplet dokumentów rekrutacyjnych (patrz zakładka „<a className="link-primary" href="/rekrutacja"> Rekrutacja</a>”) można składać osobiście
               w Biurze Projektu bądź przesyłać je drogą pocztową lub e-mailem.</p>
 
-            <p>I tura rekrutacji trwa od 01.07.2024 r. – 31.08.2024 r.</p>
+
+            <p>Rekrutacja będzie realizowana w 4 turach rekrutacyjnych w okresie VII 2024 – I 2025</p>
             <p>Aby uzyskać więcej informacji prosimy o kontakt z Biurem projektu – patrz zakładka
               <a className="link-primary" href="/kontakt"> Kontakt</a></p>
           </div>

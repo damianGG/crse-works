@@ -51,7 +51,7 @@ export default function Kontakt() {
                         <h1>Офіс Проєкту</h1>
                         <p><strong>Адреса:</strong> вул. Окопова 25, кім. 003, 10-075 Ольштин</p>
                         <p>Офіс проєкту працює з понеділка по п'ятницю з 8:00 до 16:00 (є можливість домовитися на інший час зустрічі)</p>
-                        <p><strong>Тел:</strong> +48 696 548 883</p>
+                        <p><strong>Тел:</strong> +48 880-310-980</p>
                         <p><strong>E-mail:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a> </p>
                     </div>
                     <iframe

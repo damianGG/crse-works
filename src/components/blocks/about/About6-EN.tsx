@@ -65,7 +65,7 @@ export default function About6() {
               The complete set of recruitment documents (see the "<a className="link-primary" href="/rekrutacja"> Recruitment</a>" section) can be submitted in person at the Project Office or sent by mail or email.
             </p>
 
-            <p>The 1st round of recruitment lasts from 01.07.2024 – 31.08.2024.</p>
+            <p>Recruitment will be carried out in 4 recruitment rounds in the period July 2024 - January 2025</p>
             <p>For more information, please contact the Project Office – see the <a className="link-primary" href="/kontakt">Contact</a> section.</p>
           </div>
         </div>
