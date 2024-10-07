@@ -14,7 +14,7 @@ export default function About6() {
 
         <div className="col-lg-12">
 
-          <h2 className="display-4 mb-3 text-center mb-10">Rusza I tura naboru do projektu <br></br> „INTEGRACJA-ADAPTACJA!”</h2>
+          <h2 className="display-4 mb-3 text-center mb-10">Zapraszamy do projektu <br></br> „INTEGRACJA-ADAPTACJA!”</h2>
 
           <p className="lead fs-lg">
             Zapraszamy obywateli państw trzecich, w tym migrantów oraz ich rodzin, zamieszkujące na

@@ -8,7 +8,8 @@ export default function About6() {
         </div>
 
         <div className="col-lg-12">
-          <h2 className="display-4 mb-3 text-center mb-10">The 1st round of recruitment for the project <br></br> “INTEGRATION-ADAPTATION!” begins</h2>
+          <h2 className="display-4 mb-3 text-center mb-10">
+            Welcome to the project <br></br> “INTEGRATION-ADAPTATION!” begins</h2>
           <p className="lead fs-lg">
             We invite third-country nationals, including migrants and their families, residing in the
             Warmian-Masurian Voivodeship, aged 18 and older, to participate in the “INTEGRATION-ADAPTATION!” project.

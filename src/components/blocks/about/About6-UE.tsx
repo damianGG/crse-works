@@ -8,7 +8,7 @@ export default function About6() {
         </div>
 
         <div className="col-lg-12">
-          <h2 className="display-4 mb-3 text-center mb-10">Розпочинається І тур набору до проєкту <br></br> «ІНТЕГРАЦІЯ-АДАПТАЦІЯ!»</h2>
+          <h2 className="display-4 mb-3 text-center mb-10">ласкаво просимо до проекту <br></br> «ІНТЕГРАЦІЯ-АДАПТАЦІЯ!»</h2>
 
           <p className="lead fs-lg">
             Запрошуємо громадян третіх країн, у тому числі мігрантів та їхні родини, які проживають на
