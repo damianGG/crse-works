@@ -1,9 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from 'next'
-export const metadata: Metadata = {
-    title: 'Контакт до проєкту «Жінка * Активність * Успіх»',
-    description: 'Контакт до проєкту «Жінка * Активність * Успіх» у Радомі та гміні Вєнява, а також до офісу проєкту J&P Moritz Consulting Group Jacek Poproch у Вроцлаві',
-}
+import Image from 'next/image'
+
 export default function Kontakt() {
     return (
         <>
@@ -65,6 +63,13 @@ export default function Kontakt() {
                 </div>
                 <div className="row mt-10">
                     <div className="col text-center">
+                        <Image
+                            src="/img/logos/logo-workts.jpg"
+                            alt="Picture of the author"
+                            width={105}
+                            height={65}
+                        />
+
                         <h2>Work &amp; Training Service Януш Жучек</h2>
                         <p><strong>Адреса: </strong> Сєлець 1A 39-120 Сендзішів Малопольський</p>
                         <p><strong>Сайт: </strong><Link href="http://workts.pl/" className="link-primary" target="_blank">www.workts.pl</Link></p>
@@ -73,6 +78,22 @@ export default function Kontakt() {
                         <p><strong>E-mail: </strong><a href="mailto:biuro@workts.pl" className="link-primary" target="_blank">biuro@workts.pl</a> </p>
                     </div>
 
+                </div>
+                <div className="row mt-10">
+                    <div className="col text-center">
+                        <Image
+                            src="/img/logos/logopartner.png"
+                            alt="Picture of the author"
+                            width={65}
+                            height={65}
+                        />
+                        <h2>Polsko-Niemieckie Centrum Młodzieży Europejskiej Olsztyn- Partner</h2>
+                        <p><strong>Адреса: </strong> 10-075 Olsztyn, ul. Okopowa 25</p>
+                        <p><strong>Сайт: </strong><Link href="www.pncm.olsztyn.pl" className="link-primary" target="_blank">www.pncm.olsztyn.pl</Link></p>
+                        {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
+                        <p><strong>Тел: </strong>89 534 07 80</p>
+                        <p><strong>E-mail: </strong><a href="mailto:centrum@pncm.olsztyn.pl" className="link-primary" target="_blank">centrum@pncm.olsztyn.pl</a> </p>
+                    </div>
                 </div>
                 <div className="row">
                     {/* <div className="col text-center mb-15">

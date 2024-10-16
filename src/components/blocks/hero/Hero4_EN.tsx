@@ -39,10 +39,10 @@ export default function Hero4() {
             </h3>
             <div className="d-flex justify-content-center justify-content-lg-start">
               <span style={slideInDownAnimate("1200ms")}>
-                <Link href="/rekrutacja" className="btn btn-lg btn-primary rounded-pill me-2" >Sign In</Link>
+                <Link href="/en/rekrutacja" className="btn btn-lg btn-primary rounded-pill me-2" >Sign In</Link>
               </span>
               <span style={slideInDownAnimate("1200ms")}>
-                <Link href="/aktualnosci" className="btn btn-lg btn-outline-primary rounded-pill" >News</Link>
+                <Link href="/en/aktualnosci" className="btn btn-lg btn-outline-primary rounded-pill" >News</Link>
               </span>
             </div>
           </div>

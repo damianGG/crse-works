@@ -1,9 +1,7 @@
 import Link from "next/link";
+import Image from 'next/image'
 import type { Metadata } from 'next'
-export const metadata: Metadata = {
-    title: 'Kontakt do projektu „Kobieta * Aktywność * Sukces',
-    description: 'Kontakt do projektu „Kobieta * Aktywność * Sukces” w Radomiu i gminie Wieniawa oraz do biura projektu J&P Moritz Consulting Group Jacek Poproch w Wrocławiu',
-}
+
 export default function Kontakt() {
     return (
         <>
@@ -64,15 +62,36 @@ export default function Kontakt() {
                     />
                 </div>
                 <div className="row mt-10">
-                    <div className="col text-center">
-                        <h2>Work &amp; Training Service Sp. z o.o.</h2>
+                    <div className="col text-center mt-10">
+                        <Image
+                            src="/img/logos/logo-workts.jpg"
+                            alt="Picture of the author"
+                            width={105}
+                            height={65}
+                        />
+                        <h2 className="mt-5">Work &amp; Training Service Sp. z o.o.</h2>
                         <p><strong>Adres: </strong> Sielec 1A 39-120 Sędziszów Małopolski</p>
                         <p><strong>Strona: </strong><Link href="http://workts.pl/" className="link-primary" target="_blank">www.workts.pl</Link></p>
                         {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
                         <p><strong>Tel: </strong>17 2226951</p>
                         <p><strong>E-mail: </strong><a href="mailto:biuro@workts.pl" className="link-primary" target="_blank">biuro@workts.pl</a> </p>
                     </div>
-
+                </div>
+                <div className="row mt-10">
+                    <div className="col text-center">
+                        <Image
+                            src="/img/logos/logopartner.png"
+                            alt="Picture of the author"
+                            width={65}
+                            height={65}
+                        />
+                        <h2 className="mt-5">Polsko-Niemieckie Centrum Młodzieży Europejskiej Olsztyn- Partner</h2>
+                        <p><strong>Adres: </strong> 10-075 Olsztyn, ul. Okopowa 25</p>
+                        <p><strong>Strona: </strong><Link href="www.pncm.olsztyn.pl" className="link-primary" target="_blank">www.pncm.olsztyn.pl</Link></p>
+                        {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
+                        <p><strong>Tel: </strong>89 534 07 80</p>
+                        <p><strong>E-mail: </strong><a href="mailto:centrum@pncm.olsztyn.pl" className="link-primary" target="_blank">centrum@pncm.olsztyn.pl</a> </p>
+                    </div>
                 </div>
                 <div className="row">
                     {/* <div className="col text-center mb-15">

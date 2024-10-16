@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 // Bootstrap and custom scss
@@ -11,15 +12,13 @@ import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { getMessages } from 'next-intl/server';
 import FooterBase from "@/components/blocks/footer/FooterBase";
 import LanguageSwitcher from "@/components/reuseable/LanguageSwitcher";
+import { usePathname } from "next/navigation";
 
 
 
 const manrope = Manrope({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Projekt INTEGRACJA-ADAPTACJA!",
-  description: "INTEGRACJA-ADAPTACJA!",
-};
+
 
 export default async function RootLayout({
   children, params: { locale }
@@ -35,6 +34,8 @@ export default async function RootLayout({
   //   // notFound();
   // }
 
+
+
   return (
 
 
@@ -43,7 +44,14 @@ export default async function RootLayout({
         <link rel="icon" type="image/x-icon" sizes="16x16" href="/img/favicon.ico" />
       </head>
       <body className={manrope.className}>
-        <NavbarOne button={<Link title="Contact" href="/rekrutacja" className="btn btn-sm btn-primary rounded-pill"><LanguageSwitcher /></Link>} />
+        <NavbarOne button={
+          <>
+            {/* <Link title="Contact" href={getLocalizedPath('/rekrutacja')} className="btn btn-sm btn-primary rounded-pill">
+
+            </Link>
+            <LanguageSwitcher /> */}
+          </>
+        } />
 
         <AccessibilityButton />
         <div>{children}</div>

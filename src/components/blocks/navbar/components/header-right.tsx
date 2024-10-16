@@ -6,6 +6,7 @@ import ColorModeSwitcher from "@/components/reuseable/ColorModeSwitcher";
 import AccessibilityButton from "@/components/reuseable/AccessibilityButton";
 import { useLocale } from "next-intl";
 import { Link, type Locale } from "../../../../i18n.config";
+import { usePathname } from "next/navigation";
 
 // ===================================================================
 interface HeaderRightProps {
@@ -32,10 +33,29 @@ export default function HeaderRight({
 }: HeaderRightProps) {
 
   const locale = useLocale() as Locale;
+
+  const pathname = usePathname(); // Get the current URL path
+
+  // Check if URL contains "/pl", "/uk", or "/en" to determine locale
+  const isPolishLocale = pathname.includes('/pl');
+  const isUkrainianLocale = pathname.includes('/uk');
+  const isEnglishLocale = pathname.includes('/en');
+
+  const getLocalizedPath = (slug: string) => {
+    // Determine the correct prefix for the URL based on the current locale
+    if (isPolishLocale) return `/pl${slug}`;
+    if (isUkrainianLocale) return `/uk${slug}`;
+    return `/en${slug}`; // Default to English if none match
+  };
+
   return (
     <div className={navOtherClass}>
       <ul className="navbar-nav flex-row align-items-center ms-auto">
-
+        <li className="ms-auto">
+          <Link title="Contact" href='/rekrutacja' className="btn btn-sm btn-primary rounded-pill">
+            {isPolishLocale ? "Zapisz się" : isUkrainianLocale ? "Запишіться" : "Sign in"}
+          </Link>
+        </li>
         {/* ============= info button ============= */}
         {info ? (
           <li className="nav-item">

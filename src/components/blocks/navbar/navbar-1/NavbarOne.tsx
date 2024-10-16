@@ -10,6 +10,7 @@ import HeaderRight from "../components/header-right";
 import FancyHeader from "../components/fancy-header";
 import JPLogo from "../../../../../public/img/logos/logo-workts.jpg";
 import Toplogo from "../top-logo/Toplogo";
+import LanguageSwitcher from "@/components/reuseable/LanguageSwitcher";
 
 interface NavbarProps {
   info?: boolean;
@@ -96,8 +97,10 @@ export default function NavbarOne({
             </Link></li>
             <li><Link className="nav-link fs-20" href={getLocalizedPath('/kontakt')}>
               {isPolishLocale ? "Kontakt" : isUkrainianLocale ? "Контакт" : "Contact"}
-            </Link></li>
+            </Link>
+            </li>
           </ul>
+
 
           {/* Contact info displayed in small device sidebar */}
           <div className="offcanvas-footer d-lg-none">
