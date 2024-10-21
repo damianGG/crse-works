@@ -50,13 +50,13 @@ export default function Footer2() {
                 </div>
               </div>
               <div className="col-md-4 col-lg-3">
-                {/* <div className="widget">
+                <div className="widget">
                   <p className="widget-title fs-15 fw-bold">
                     <i className="uil uil-facebook-f fs-25" /> facebook</p>
 
-                  <Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P Moritz Consulting</Link>
+                  <Link href="https://www.facebook.com/profile.php?id=61562831804317" className="link-primary" target="_blank">Integracja - Adaptacja</Link>
 
-                </div> */}
+                </div>
               </div>
             </div>
 

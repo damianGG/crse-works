@@ -3,6 +3,7 @@ import Link from "next/link";
 import { slideInDownAnimate, zoomInAnimate } from "@/utils/animation";
 import Image from "next/image";
 import MainPhoto from "../../../../public/img/photos/main_photo2.jpg";
+import PopupFormEnglish from "../form/popupformEN";
 
 export default function Hero4() {
   return (
@@ -39,7 +40,7 @@ export default function Hero4() {
             </h3>
             <div className="d-flex justify-content-center justify-content-lg-start">
               <span style={slideInDownAnimate("1200ms")}>
-                <Link href="/en/rekrutacja" className="btn btn-lg btn-primary rounded-pill me-2" >Sign In</Link>
+                <PopupFormEnglish />
               </span>
               <span style={slideInDownAnimate("1200ms")}>
                 <Link href="/en/aktualnosci" className="btn btn-lg btn-outline-primary rounded-pill" >News</Link>

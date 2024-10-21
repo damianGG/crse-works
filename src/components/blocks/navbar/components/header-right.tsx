@@ -7,6 +7,9 @@ import AccessibilityButton from "@/components/reuseable/AccessibilityButton";
 import { useLocale } from "next-intl";
 import { Link, type Locale } from "../../../../i18n.config";
 import { usePathname } from "next/navigation";
+import PopupForm from "../../form/popupform";
+import PopupFormUkrainian from "../../form/popupformUK";
+import PopupFormEnglish from "../../form/popupformEN";
 
 // ===================================================================
 interface HeaderRightProps {
@@ -52,9 +55,9 @@ export default function HeaderRight({
     <div className={navOtherClass}>
       <ul className="navbar-nav flex-row align-items-center ms-auto">
         <li className="ms-auto">
-          <Link title="Contact" href='/rekrutacja' className="btn btn-sm btn-primary rounded-pill">
-            {isPolishLocale ? "Zapisz się" : isUkrainianLocale ? "Запишіться" : "Sign in"}
-          </Link>
+
+          {isPolishLocale ? <PopupForm /> : isUkrainianLocale ? <PopupFormUkrainian /> : <PopupFormEnglish />}
+
         </li>
         {/* ============= info button ============= */}
         {info ? (
