@@ -97,6 +97,5 @@ export default async function BlogDetailsTemplate({ params }: { params: { slug: 
                 </div>
             </section>
         </>
-
     );
 }
