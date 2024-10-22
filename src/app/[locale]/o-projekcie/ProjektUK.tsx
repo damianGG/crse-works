@@ -243,7 +243,7 @@ export default function News() {
                             <div>
                                 <figure className="rounded shadow">
                                     <Image
-                                        src="/img/photos/dietetyk.webp"
+                                        src="/img/photos/shutterstock_2442851431.jpg"
                                         width={600}
                                         height={1000}
                                         alt="hero"
@@ -304,7 +304,7 @@ export default function News() {
                             <div>
                                 <figure className="rounded shadow">
                                     <Image
-                                        src="/img/photos/ludzie.jpg"
+                                        src="/img/photos/shutterstock_2291512991.jpg"
                                         width={600}
                                         height={1000}
                                         alt="hero"
@@ -352,7 +352,7 @@ export default function News() {
                             <div>
                                 <figure className="rounded shadow">
                                     <Image
-                                        src="/img/photos/dietetyk.webp"
+                                        src="/img/photos/shutterstock_2429447415.jpg"
                                         width={600}
                                         height={1000}
                                         alt="hero"
