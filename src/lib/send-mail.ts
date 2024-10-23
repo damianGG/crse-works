@@ -6,7 +6,7 @@ const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
 const SITE_MAIL_RECIEVER = process.env.SITE_MAIL_RECIEVER;
 const transporter = nodemailer.createTransport({
   host: SMTP_SERVER_HOST,
-  port: 465,
+  port: 587,
   secure: false,
   auth: {
     user: SMTP_SERVER_USERNAME,
@@ -35,11 +35,12 @@ export async function sendMail({
     return;
   }
   const info = await transporter.sendMail({
-    from: email,
-    to: sendTo || SITE_MAIL_RECIEVER,
-    subject: subject,
-    text: text,
-    html: html ? html : '',
+      from: `Formularz ze strony integracja-adaptacja`, 
+      replyTo: "integracjaaktywacjaformularz@workts.pl",
+      to: sendTo || SITE_MAIL_RECIEVER, 
+      subject: 'Formularz ze strony integracja-adaptacja',
+      text: text,
+      html: html ? html : ''
   });
   console.log('Message Sent', info.messageId);
   console.log('Mail sent to', SITE_MAIL_RECIEVER);
