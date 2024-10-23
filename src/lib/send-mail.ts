@@ -6,7 +6,7 @@ const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
 const SITE_MAIL_RECIEVER = process.env.SITE_MAIL_RECIEVER;
 const transporter = nodemailer.createTransport({
   host: SMTP_SERVER_HOST,
-  port: 587,
+  port: 465,
   secure: false,
   auth: {
     user: SMTP_SERVER_USERNAME,
