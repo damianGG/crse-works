@@ -45,13 +45,21 @@ export default async function News({ params }: { params: { locale: string } }) {
     // Determine the locale from the URL params
     const locale = ['pl', 'uk', 'en'].includes(params.locale) ? params.locale : 'en'; // Added English as the default locale
 
-    console.log(locale)
+    console.log(locale);
     // Fetch data dynamically based on locale
     const { data } = await getStrapiData(locale);
 
+    // Sort the data based on the 'data' field in descending order
+    const sortedData = data.sort((a: any, b: any) => {
+        const dateA = new Date(a.attributes.data);
+        const dateB = new Date(b.attributes.data);
+        return dateB.getTime() - dateA.getTime(); // Descending order
+    });
+
     // Set the appropriate locale for date formatting
     const dateLocale = locale === 'pl' ? pl : locale === 'uk-UA' ? uk : enUS;
-    console.log(dateLocale)
+    console.log(dateLocale);
+    console.log(sortedData);
 
     return (
         <>
@@ -84,7 +92,6 @@ export default async function News({ params }: { params: { locale: string } }) {
                         <div className="col-md-9 col-lg-7 col-xl-5 mx-auto">
                             <h1 className="display-1 mb-3" style={{ color: 'white' }}>
                                 {locale === 'pl' ? 'Aktualności' : locale === 'uk' ? 'Новини' : 'News'}
-
                             </h1>
                             <p className="lead px-xxl-10"></p>
                         </div>
@@ -93,8 +100,7 @@ export default async function News({ params }: { params: { locale: string } }) {
             </section>
             <div className="container mb-15 mt-15">
                 <div className="row gx-0 gx-md-3 gx-xl-8 gy-8 align-items-center">
-
-                    {data.map((article: any) => {
+                    {sortedData.map((article: any) => {
                         const slug = createSlug(article.attributes.tytul);
 
                         // Generate article URL: without 'pl' prefix for Polish, 'uk' for Ukrainian, 'en' for English
