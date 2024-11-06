@@ -23,7 +23,7 @@ export default function Footer2() {
                     <i className="uil uil-map me-2 fs-25"></i> Address (Project Office)
                   </p>
                   <address>
-                    Okopowa 25, Room 003 <br className="d-none d-md-block" /> 10-075 Olsztyn
+                    ul. 1 Maja 13 <br className="d-none d-md-block" /> 10-075 Olsztyn
                   </address>
                 </div>
               </div>

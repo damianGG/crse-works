@@ -47,7 +47,7 @@ export default function Kontakt() {
                 <div className="row">
                     <div className="col text-center">
                         <h1>Biuro Projektu</h1>
-                        <p><strong>Adres:</strong> ul. Okopowa 25, pok. 003, 10-075 Olsztyn</p>
+                        <p><strong>Adres:</strong> ul. 1 Maja 13, V piętro, pokój 512., 10-075 Olsztyn</p>
                         <p>Biuro projektu czynne jest od poniedziałku do piątku w godzinach 8:00 - 16:00 (istnieje możliwość umówienia się na inne godziny spotkania)</p>
                         <p><strong>Tel:</strong> +48 880-310-980</p>
                         <p><strong>E-mail:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a> </p>

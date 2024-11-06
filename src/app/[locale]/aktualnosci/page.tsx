@@ -106,7 +106,7 @@ export default async function News({ params }: { params: { locale: string } }) {
                         // Generate article URL: without 'pl' prefix for Polish, 'uk' for Ukrainian, 'en' for English
                         const articleUrl = locale === 'pl'
                             ? `/pl/aktualnosci/${article.id}-${slug}`  // No 'pl' prefix for Polish
-                            : locale === 'uk'
+                            : locale === 'uk-UA'
                                 ? `/uk/aktualnosci/${article.id}-${slug}`  // 'uk' prefix for Ukrainian
                                 : `/en/aktualnosci/${article.id}-${slug}`;  // 'en' prefix for English
 

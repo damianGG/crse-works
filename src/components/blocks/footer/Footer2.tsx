@@ -27,7 +27,7 @@ export default function Footer2() {
                 <div className="widget">
                   <p className="widget-title fs-15 fw-bold"><i className="uil uil-map me-2 fs-25" ></i> Adres (biuro projektu)</p>
                   <address>
-                    ul. Okopowa 25, pok. 003 <br className="d-none d-md-block" /> 10-075 Olsztyn
+                    ul. 1 Maja 13 <br className="d-none d-md-block" /> 10-075 Olsztyn
                   </address>
                 </div>
               </div>

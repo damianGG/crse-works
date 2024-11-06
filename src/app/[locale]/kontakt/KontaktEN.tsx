@@ -48,7 +48,7 @@ export default function Contact() {
                 <div className="row">
                     <div className="col text-center">
                         <h1>Project Office</h1>
-                        <p><strong>Address:</strong> ul. Okopowa 25, room 003, 10-075 Olsztyn</p>
+                        <p><strong>Address:</strong> ul. 1 Maja 13, V floor, room 512., 10-075 Olsztyn</p>
                         <p>The project office is open from Monday to Friday from 8:00 AM to 4:00 PM (it is possible to arrange a meeting at different hours)</p>
                         <p><strong>Phone:</strong> +48 880-310-980</p>
                         <p><strong>Email:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a></p>
