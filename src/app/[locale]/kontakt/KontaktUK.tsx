@@ -52,8 +52,7 @@ export default function Kontakt() {
                         <p><strong>Тел:</strong> +48 880-310-980</p>
                         <p><strong>E-mail:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a> </p>
                     </div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d147.3567684576021!2d20.473796139686183!3d53.7768801612333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27ed6da99889f%3A0x8d34fc46b6786c2c!2sOkopowa%2025%2C%2011-041%20Olsztyn!5e0!3m2!1spl!2spl!4v1724064079973!5m2!1spl!2spl"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.0794955089045!2d20.47719788771185!3d53.77969314547938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27ed23206f783%3A0xddee4e264cc823d3!2s1%20Maja%2013%2C%2011-041%20Olsztyn!5e0!3m2!1spl!2spl!4v1731059390178!5m2!1spl!2spl"
                         width={600}
                         height={450}
                         style={{ border: 0 }}
