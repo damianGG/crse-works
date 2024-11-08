@@ -47,7 +47,7 @@ export default function Kontakt() {
                 <div className="row">
                     <div className="col text-center">
                         <h1>Офіс Проєкту</h1>
-                        <p><strong>Адреса:</strong> ul. 1 Maja 13, V piętro, pokój 512., 10-075 Olsztyn</p>
+                        <p><strong>Адреса:</strong> ul. 1 Maja 13, V piętro, pokój 512., 10-117 Olsztyn</p>
                         <p>Офіс проєкту працює з понеділка по п'ятницю з 8:00 до 16:00 (є можливість домовитися на інший час зустрічі)</p>
                         <p><strong>Тел:</strong> +48 880-310-980</p>
                         <p><strong>E-mail:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a> </p>
@@ -88,7 +88,7 @@ export default function Kontakt() {
                             height={65}
                         />
                         <h2>Polsko-Niemieckie Centrum Młodzieży Europejskiej Olsztyn- Partner</h2>
-                        <p><strong>Адреса: </strong> 10-075 Olsztyn, ul. Okopowa 25</p>
+                        <p><strong>Адреса: </strong> 10-117 Olsztyn, ul. Okopowa 25</p>
                         <p><strong>Сайт: </strong><Link href="www.pncm.olsztyn.pl" className="link-primary" target="_blank">www.pncm.olsztyn.pl</Link></p>
                         {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
                         <p><strong>Тел: </strong>89 534 07 80</p>

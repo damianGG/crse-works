@@ -21,7 +21,7 @@ export default function Footer2() {
                     <i className="uil uil-map me-2 fs-25"></i> Адреса (офіс проєкту)
                   </p>
                   <address>
-                    ul. 1 Maja 13 <br className="d-none d-md-block" /> 10-075 Ольштин
+                    ul. 1 Maja 13 <br className="d-none d-md-block" /> 10-117 Ольштин
                   </address>
                 </div>
               </div>
