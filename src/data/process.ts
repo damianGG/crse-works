@@ -182,16 +182,16 @@ export const doPobrania = [
     shadow: true,
     subtitle: ""
   },
+  // {
+  //   no: "6",
+  //   title: "Klauzula informacyjna",
+  //   className: "me-lg-6 mt-6 text-start",
+  //   subtitle: "załącznik nr 2 do Regulaminu rekrutacji i uczestnictwa w projekcie; - obligatoryjnie",
+  //   shadow: true,
+  // },
+  // ,
   {
     no: "6",
-    title: "Klauzula informacyjna",
-    className: "me-lg-6 mt-6 text-start",
-    subtitle: "załącznik nr 2 do Regulaminu rekrutacji i uczestnictwa w projekcie; - obligatoryjnie",
-    shadow: true,
-  },
-  ,
-  {
-    no: "7",
     title: "Oświadczenie dotyczące osoby pracującej (jeśli dotyczy)",
     className: "me-lg-6 mt-6 text-start",
     subtitle: "załącznik nr 8 do Regulaminu rekrutacji i uczestnictwa w projekcie",
@@ -234,15 +234,15 @@ export const doPobraniaEN = [
     "shadow": true,
     "subtitle": ""
   },
+  // {
+  //   "no": "6",
+  //   "title": "Information clause",
+  //   "className": "me-lg-6 mt-6 text-start",
+  //   "subtitle": "attachment no. 2 to the Recruitment and Participation Regulations in the project; - obligatory",
+  //   "shadow": true
+  // },
   {
     "no": "6",
-    "title": "Information clause",
-    "className": "me-lg-6 mt-6 text-start",
-    "subtitle": "attachment no. 2 to the Recruitment and Participation Regulations in the project; - obligatory",
-    "shadow": true
-  },
-  {
-    "no": "7",
     "title": "Statement concerning a working person (if applicable)",
     "className": "me-lg-6 mt-6 text-start",
     "subtitle": "attachment no. 8 to the Recruitment and Participation Regulations in the project",
@@ -285,15 +285,15 @@ export const doPobraniaUK = [
     "shadow": true,
     "subtitle": ""
   },
+  // {
+  //   "no": "6",
+  //   "title": "Інформаційна заява",
+  //   "className": "me-lg-6 mt-6 text-start",
+  //   "subtitle": "додаток №2 до Регламенту набору та участі у проєкті; - обов'язково",
+  //   "shadow": true
+  // },
   {
     "no": "6",
-    "title": "Інформаційна заява",
-    "className": "me-lg-6 mt-6 text-start",
-    "subtitle": "додаток №2 до Регламенту набору та участі у проєкті; - обов'язково",
-    "shadow": true
-  },
-  {
-    "no": "7",
     "title": "Заява щодо працюючої особи (якщо стосується)",
     "className": "me-lg-6 mt-6 text-start",
     "subtitle": "додаток №8 до Регламенту набору та участі у проєкті",
