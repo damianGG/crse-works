@@ -49,7 +49,7 @@ export default function Kontakt() {
                         <h1>Biuro Projektu</h1>
                         <p><strong>Adres:</strong> ul. Grunwaldzka 1,   pok. 12, 19-300 Ełk</p>
                         <p>Biuro projektu czynne jest od poniedziałku do piątku w godzinach 8:00 - 16:00 (istnieje możliwość umówienia się na inne godziny spotkania)</p>
-                        <p><strong>Tel:</strong> +48 880-310-980</p>
+                        <p><strong>Tel: </strong> +48 880-310-980</p>
                         <p><strong>E-mail:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a> </p>
                     </div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5586.575938056728!2d22.33519484904562!3d53.828197127093674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1b96385d3140d%3A0x9762a6374e1ea500!2sGrunwaldzka%201%2C%2019-300%20E%C5%82k!5e1!3m2!1spl!2spl!4v1743709078531!5m2!1spl!2splhttps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5586.575938056728!2d22.33519484904562!3d53.828197127093674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1b96385d3140d%3A0x9762a6374e1ea500!2sGrunwaldzka%201%2C%2019-300%20E%C5%82k!5e1!3m2!1spl!2spl!4v1743709078531!5m2!1spl!2spl"

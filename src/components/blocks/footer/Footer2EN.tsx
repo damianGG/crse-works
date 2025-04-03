@@ -23,7 +23,7 @@ export default function Footer2() {
                     <i className="uil uil-map me-2 fs-25"></i> Address (Project Office)
                   </p>
                   <address>
-                    ul. Grunwaldzka 1 <br className="d-none d-md-block" />  pok. 12, 19-300 Ełk
+                    ul. Grunwaldzka 1  <br className="d-none d-md-block" />  pok. 12, 19-300 Ełk
                   </address>
                 </div>
               </div>
