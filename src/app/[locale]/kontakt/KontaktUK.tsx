@@ -47,12 +47,12 @@ export default function Kontakt() {
                 <div className="row">
                     <div className="col text-center">
                         <h1>Офіс Проєкту</h1>
-                        <p><strong>Адреса:</strong> ul. 1 Maja 13, V piętro, pokój 512., 10-117 Olsztyn</p>
+                        <p><strong>Адреса:</strong> ul. Grunwaldzka 1,   pok. 12, 19-300 Ełk</p>
                         <p>Офіс проєкту працює з понеділка по п'ятницю з 8:00 до 16:00 (є можливість домовитися на інший час зустрічі)</p>
                         <p><strong>Тел:</strong> +48 880-310-980</p>
                         <p><strong>E-mail:</strong> <a href="mailto:integracjaadaptacja@workts.pl" className="link-primary" target="_blank">integracjaadaptacja@workts.pl</a> </p>
                     </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.0794955089045!2d20.47719788771185!3d53.77969314547938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27ed23206f783%3A0xddee4e264cc823d3!2s1%20Maja%2013%2C%2011-041%20Olsztyn!5e0!3m2!1spl!2spl!4v1731059390178!5m2!1spl!2spl"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5586.575938056728!2d22.33519484904562!3d53.828197127093674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1b96385d3140d%3A0x9762a6374e1ea500!2sGrunwaldzka%201%2C%2019-300%20E%C5%82k!5e1!3m2!1spl!2spl!4v1743709078531!5m2!1spl!2spl"
                         width={600}
                         height={450}
                         style={{ border: 0 }}
@@ -87,7 +87,7 @@ export default function Kontakt() {
                             height={65}
                         />
                         <h2>Polsko-Niemieckie Centrum Młodzieży Europejskiej Olsztyn- Partner</h2>
-                        <p><strong>Адреса: </strong> 10-117 Olsztyn, ul. Okopowa 25</p>
+                        <p><strong>Адреса: </strong>  pok. 12, 19-300 Ełk, ul. Okopowa 25</p>
                         <p><strong>Сайт: </strong><Link href="www.pncm.olsztyn.pl" className="link-primary" target="_blank">www.pncm.olsztyn.pl</Link></p>
                         {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
                         <p><strong>Тел: </strong>89 534 07 80</p>
