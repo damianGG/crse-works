@@ -79,17 +79,17 @@ export default function Kontakt() {
                 <div className="row mt-10">
                     <div className="col text-center">
                         <Image
-                            src="/img/logos/logopartner.png"
+                            src="/img/logos/logo_partner.png"
                             alt="Picture of the author"
                             width={65}
                             height={65}
                         />
-                        <h2 className="mt-5">Polsko-Niemieckie Centrum Młodzieży Europejskiej Olsztyn- Partner</h2>
-                        <p><strong>Adres: </strong>  ul. Grunwaldzka 1, V piętro, pokój 512.,  pok. 12, 19-300 Ełk</p>
-                        <p><strong>Strona: </strong><Link href="www.pncm.olsztyn.pl" className="link-primary" target="_blank">www.pncm.olsztyn.pl</Link></p>
+                        <h2 className="mt-5">Centrum Bezpieczeństwa Regionu Morza Bałtyckiego- Partner</h2>
+                        <p><strong>Adres: </strong>  ul. OKOPOWA 25,  10-075 OLSZTYNk</p>
+                        <p><strong>Strona: </strong><Link href="https://cbrmb.pl/" className="link-primary" target="_blank">https://cbrmb.pl/</Link></p>
                         {/* <p><strong>Facebook: </strong><Link href="https://www.facebook.com/profile.php?id=61558567391191" className="link-primary" target="_blank">J&P</Link></p> */}
-                        <p><strong>Tel: </strong>89 534 07 80</p>
-                        <p><strong>E-mail: </strong><a href="mailto:centrum@pncm.olsztyn.pl" className="link-primary" target="_blank">centrum@pncm.olsztyn.pl</a> </p>
+                        <p><strong>Tel: </strong>+48 570 664 019</p>
+                        <p><strong>E-mail: </strong><a href="mailto:kontakt@cbrmb.pl" className="link-primary" target="_blank">kontakt@cbrmb.pl</a> </p>
                     </div>
                 </div>
                 <div className="row">
