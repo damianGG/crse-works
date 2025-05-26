@@ -31,7 +31,7 @@ export default function Hero4() {
               „ІНТЕГРАЦІЯ-АДАПТАЦІЯ!”
             </h1>
             <h3 className="mb-10">
-              Період реалізації: 01.07.2024 р. – 30.06.2025 р.
+              Період реалізації: 01.07.2024 р. – 31.08.2025 р.
             </h3>
             <div className="d-flex justify-content-center justify-content-lg-start">
               <span style={slideInDownAnimate("1200ms")}>

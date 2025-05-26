@@ -48,7 +48,7 @@ export default function News() {
                     <p className="mb-3 fw-bold lead fs-lg">Celem głównym projektu jest wsparcie integracji społeczno-gospodarczej 70
                         obywateli państw trzecich, w tym migrantów oraz ich rodzin (42K, 28M) w wieku 18
                         lat i więcej zamieszkujących w rozumieniu KC na obszarze woj. warmińsko-
-                        mazurskie w okresie 1.07.2024 – 30.06.2025, w efekcie której u 70 uczestników
+                        mazurskie w okresie 1.07.2024 – 31.08.2025, w efekcie której u 70 uczestników
                         projektu sytuacja społeczna ulegnie poprawie.</p>
                 </div>
 

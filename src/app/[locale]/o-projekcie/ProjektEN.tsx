@@ -49,7 +49,7 @@ export default function News() {
                         The main goal of the project is to support the socio-economic integration
                         of 70 third-country nationals, including migrants and their families
                         (42 women, 28 men) aged 18 and older, residing in the Warmian-Masurian
-                        Voivodeship from 01.07.2024 to 30.06.2025. As a result, the social
+                        Voivodeship from 01.07.2024 to 31.08.2025. As a result, the social
                         situation of 70 project participants will improve.
                     </p>
                 </div>
